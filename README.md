@@ -10,43 +10,29 @@ They were adapted from the files located at:
 
 Mobile-SDK-iOS/Sample Code/ObjcSampleCode/DJISdkDemo/Demo/Camera/fpv/
 
-###############
-Project Overview #
-###############
+## Project Overview
 
-For this project I adapted a DJI iphone app to be able to secure a video feed from a connected DJI drone
-and then display that video feed while performing real-time object detection. The model prediction at any
-moment is displayed in text above the video feed.
+For this project I adapted a DJI iphone app to process the video feed of a DJI drone to perform real-time object detection. The model prediction at any moment is displayed in text above the video feed.
 
-Object detection was set up using Apple’s CoreML framework together with a pretrained Resnet50 model.
+Object detection was set up using Apple’s CoreML framework together with a pretrained Resnet model.
 Each time the phone receives a new frame from the drone, the raw pixel data is transferred into a buffer
 after which it is converted into a CoreML-friendly datatype called CIImage. From there the image is passed
 to the model which returns a prediction and the result is displayed in a label above the live video feed from the drone.
 
-##############
-File explanation #
-##############
+## File explanation
 
-.m file   ← main file of interest
-    
-    * This is the logic for the view controller. All the dynamic features of the apps FPV mode i
+.m file ← main file of interest
+- This is the logic for the view controller. All the dynamic features of the apps FPV mode i
     are controlled here - including the parsing of video frames using the CoreML framework.
-    
-    * Especially pay attention to the following methods:
-      
-      - videoProcessFrame
-      
-      - processImage
+- Especially pay attention to the following methods:
+    - videoProcessFrame
+    - processImage
 
 .h file
-   
-   * Typical header file: imports libraries and declares variables. The UI elements defined in
-    the xib file are connected to the .m file here.
+    - Typical header file: imports libraries and declares variables. The UI elements defined in the xib file are connected to the .m file here.
 
 .xib file
-    
-    * The XML code which defines the user interface.
+    - The XML code which defines the user interface.
 
 .mlmodel
-   
-   * The Resnet vision model was too large for github upload, so this is omitted
+    - The Resnet vision model was too large for github upload, so this is omitted
