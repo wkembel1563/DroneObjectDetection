@@ -5,7 +5,7 @@ The final version of this project was adapted from the following github reposito
 https://github.com/dji-sdk/Mobile-SDK-iOS
 
 All other project files can be found in that repository.
-The files I modified for the project are included in this submission.
+The files I modified for the project are included in this repo.
 They were adapted from the files located at:
 
 Mobile-SDK-iOS/Sample Code/ObjcSampleCode/DJISdkDemo/Demo/Camera/fpv/
