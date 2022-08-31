@@ -1,6 +1,7 @@
 # DroneObjectDetection
 
 The final version of this project was adapted from the following github repository from DJI:
+
 https://github.com/dji-sdk/Mobile-SDK-iOS
 
 All other project files can be found in that repository.
