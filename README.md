@@ -13,6 +13,7 @@ Mobile-SDK-iOS/Sample Code/ObjcSampleCode/DJISdkDemo/Demo/Camera/fpv/
 ###############
 Project Overview #
 ###############
+
 For this project I adapted a DJI iphone app to be able to secure a video feed from a connected DJI drone
 and then display that video feed while performing real-time object detection. The model prediction at any
 moment is displayed in text above the video feed.
@@ -25,19 +26,27 @@ to the model which returns a prediction and the result is displayed in a label a
 ##############
 File explanation #
 ##############
+
 .m file   ← main file of interest
+    
     * This is the logic for the view controller. All the dynamic features of the apps FPV mode i
     are controlled here - including the parsing of video frames using the CoreML framework.
+    
     * Especially pay attention to the following methods:
+      
       - videoProcessFrame
+      
       - processImage
 
 .h file
-    * Typical header file: imports libraries and declares variables. The UI elements defined in
+   
+   * Typical header file: imports libraries and declares variables. The UI elements defined in
     the xib file are connected to the .m file here.
 
 .xib file
+    
     * The XML code which defines the user interface.
 
 .mlmodel
-    * The Resnet vision model was too large for github upload, so this is omitted
+   
+   * The Resnet vision model was too large for github upload, so this is omitted
